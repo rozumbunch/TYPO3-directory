@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.2"
+	xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:directory/Resources/Private/Language/locallang_db.xlf">
+		<body>
+			<trans-unit id="tabs.description" resname="tabs.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tabs.contact" resname="tabs.contact">
+				<source>Contact</source>
+				<target>Kontakt</target>
+			</trans-unit>
+			<trans-unit id="tabs.address" resname="tabs.address">
+				<source>Address</source>
+				<target>Anschrift</target>
+			</trans-unit>
+			<trans-unit id="tabs.person_address" resname="tabs.person_address">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="tabs.organisations" resname="tabs.organisations">
+				<source>Organisations</source>
+				<target>Organisationen</target>
+			</trans-unit>
+			<trans-unit id="tabs.business_units" resname="tabs.business_units">
+				<source>Business Units</source>
+				<target>Geschäftsbereiche</target>
+			</trans-unit>
+			<trans-unit id="tabs.locations" resname="tabs.locations">
+				<source>Locations</source>
+				<target>Standorte</target>
+			</trans-unit>
+			<trans-unit id="tabs.media" resname="tabs.media">
+				<source>Media</source>
+				<target>Medien</target>
+			</trans-unit>
+			<trans-unit id="tabs.seo" resname="tabs.seo">
+				<source>SEO</source>
+				<target>SEO</target>
+			</trans-unit>
+			<trans-unit id="tabs.work" resname="tabs.work">
+				<source>Work</source>
+				<target>Arbeit</target>
+			</trans-unit>
+			<trans-unit id="tabs.map" resname="tabs.map">
+				<source>Map</source>
+				<target>Karte</target>
+			</trans-unit>
+			<trans-unit id="tabs.on_site" resname="tabs.on_site">
+				<source>On site</source>
+				<target>Vor Ort</target>
+			</trans-unit>
+			<trans-unit id="palette.address" resname="palette.address">
+				<source>Address</source>
+				<target>Anschrift</target>
+			</trans-unit>
+			<trans-unit id="palette.name" resname="palette.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="identifier" resname="identifier">
+				<source>Identifier</source>
+				<target>Kennung</target>
+			</trans-unit>
+			<trans-unit id="file.add" resname="file.add">
+				<source>Add file</source>
+				<target>Datei hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="relation.add" resname="relation.add">
+				<source>Create record</source>
+				<target>Datensatz anlegen</target>
+			</trans-unit>
+			<trans-unit id="location.add" resname="location.add">
+				<source>Add address / location</source>
+				<target>Adresse/Standort hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="settings.category" resname="settings.category">
+				<source>Directory</source>
+				<target>Verzeichnis</target>
+			</trans-unit>
+			<trans-unit id="settings.storagePid" resname="settings.storagePid">
+				<source>Storage folder</source>
+				<target>Ablageordner</target>
+			</trans-unit>
+			<trans-unit id="settings.storagePid.description" resname="settings.storagePid.description">
+				<source>SysFolder of this site for organisations, locations and persons. New records and list selection use this folder.</source>
+				<target>SysOrdner dieser Site für Organisationen, Standorte und Personen. Neue Datensätze und die Listenauswahl landen dort.</target>
+			</trans-unit>
+			<trans-unit id="settings.personDetailPid" resname="settings.personDetailPid">
+				<source>Person detail page</source>
+				<target>Personen-Detailseite</target>
+			</trans-unit>
+			<trans-unit id="settings.personDetailPid.description" resname="settings.personDetailPid.description">
+				<source>Page that contains the person detail plugin. Used for slug URLs and record links.</source>
+				<target>Seite mit dem Personen-Detail-Plugin. Wird für Slug-URLs und Datensatzlinks verwendet.</target>
+			</trans-unit>
+			<trans-unit id="settings.personListPid" resname="settings.personListPid">
+				<source>Person list page</source>
+				<target>Personen-Listenseite</target>
+			</trans-unit>
+			<trans-unit id="settings.personListPid.description" resname="settings.personListPid.description">
+				<source>Page that contains the person list plugin. Used for the back link on the person detail page.</source>
+				<target>Seite mit dem Personen-Listen-Plugin. Wird für den Zurück-Link auf der Personen-Detailseite verwendet.</target>
+			</trans-unit>
+			<trans-unit id="settings.organisationDetailPid" resname="settings.organisationDetailPid">
+				<source>Organisation detail page</source>
+				<target>Organisations-Detailseite</target>
+			</trans-unit>
+			<trans-unit id="settings.organisationDetailPid.description" resname="settings.organisationDetailPid.description">
+				<source>Page that contains the organisation detail plugin. Used for slug URLs and organigram links.</source>
+				<target>Seite mit dem Organisations-Detail-Plugin. Wird für Slug-URLs und Datensatzlinks verwendet.</target>
+			</trans-unit>
+			<trans-unit id="settings.organisationListPid" resname="settings.organisationListPid">
+				<source>Organisation list page</source>
+				<target>Organisations-Listenseite</target>
+			</trans-unit>
+			<trans-unit id="settings.organisationListPid.description" resname="settings.organisationListPid.description">
+				<source>Page that contains the organisation list plugin. Used for the back link on the organisation detail page.</source>
+				<target>Seite mit dem Organisations-Listen-Plugin. Wird für den Zurück-Link auf der Organisations-Detailseite verwendet.</target>
+			</trans-unit>
+
+			<trans-unit id="salutation.none" resname="salutation.none">
+				<source>none</source>
+				<target>ohne</target>
+			</trans-unit>
+			<trans-unit id="salutation.mr" resname="salutation.mr">
+				<source>Mr</source>
+				<target>Herr</target>
+			</trans-unit>
+			<trans-unit id="salutation.ms" resname="salutation.ms">
+				<source>Ms</source>
+				<target>Frau</target>
+			</trans-unit>
+			<trans-unit id="salutation.diverse" resname="salutation.diverse">
+				<source>diverse</source>
+				<target>divers</target>
+			</trans-unit>
+
+			<trans-unit id="organisation_type.company" resname="organisation_type.company">
+				<source>Company</source>
+				<target>Unternehmen</target>
+			</trans-unit>
+			<trans-unit id="organisation_type.authority" resname="organisation_type.authority">
+				<source>Authority</source>
+				<target>Behörde</target>
+			</trans-unit>
+			<trans-unit id="organisation_type.association" resname="organisation_type.association">
+				<source>Association / Federation</source>
+				<target>Verein / Verband</target>
+			</trans-unit>
+			<trans-unit id="organisation_type.department" resname="organisation_type.department">
+				<source>Department</source>
+				<target>Abteilung</target>
+			</trans-unit>
+			<trans-unit id="organisation_type.orgunit" resname="organisation_type.orgunit">
+				<source>Organisational unit</source>
+				<target>Organisationseinheit</target>
+			</trans-unit>
+			<trans-unit id="organisation_type.institution" resname="organisation_type.institution">
+				<source>Institution</source>
+				<target>Einrichtung</target>
+			</trans-unit>
+			<trans-unit id="organisation_type.other" resname="organisation_type.other">
+				<source>Other organisation</source>
+				<target>Sonstige Organisation</target>
+			</trans-unit>
+
+			<trans-unit id="location_type.private" resname="location_type.private">
+				<source>Private address</source>
+				<target>Private Adresse</target>
+			</trans-unit>
+			<trans-unit id="location_type.company" resname="location_type.company">
+				<source>Company location</source>
+				<target>Firmenstandort</target>
+			</trans-unit>
+			<trans-unit id="location_type.poi" resname="location_type.poi">
+				<source>POI</source>
+				<target>POI</target>
+			</trans-unit>
+			<trans-unit id="location_type.other" resname="location_type.other">
+				<source>Other</source>
+				<target>Sonstiges</target>
+			</trans-unit>
+
+			<trans-unit id="tx_directory_domain_model_person" resname="tx_directory_domain_model_person">
+				<source>Person</source>
+				<target>Person</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.salutation" resname="tx_directory_domain_model_person.salutation">
+				<source>Salutation</source>
+				<target>Anrede</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.first_name" resname="tx_directory_domain_model_person.first_name">
+				<source>First name</source>
+				<target>Vorname</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.last_name" resname="tx_directory_domain_model_person.last_name">
+				<source>Last name</source>
+				<target>Nachname</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.title" resname="tx_directory_domain_model_person.title">
+				<source>Academic title</source>
+				<target>Akademischer Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.display_name" resname="tx_directory_domain_model_person.display_name">
+				<source>Display name</source>
+				<target>Anzeigename</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.position" resname="tx_directory_domain_model_person.position">
+				<source>Position / job title</source>
+				<target>Stelle / Dienststellung</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.short_description" resname="tx_directory_domain_model_person.short_description">
+				<source>Short description</source>
+				<target>Kurzbeschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.description" resname="tx_directory_domain_model_person.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.email" resname="tx_directory_domain_model_person.email">
+				<source>Email</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.phone" resname="tx_directory_domain_model_person.phone">
+				<source>Phone</source>
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.mobile" resname="tx_directory_domain_model_person.mobile">
+				<source>Mobile</source>
+				<target>Mobil</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.website" resname="tx_directory_domain_model_person.website">
+				<source>Website</source>
+				<target>Website</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.social_profile" resname="tx_directory_domain_model_person.social_profile">
+				<source>Social profile</source>
+				<target>Social-Profil</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.image" resname="tx_directory_domain_model_person.image">
+				<source>Profile image</source>
+				<target>Profilbild</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.media" resname="tx_directory_domain_model_person.media">
+				<source>Media</source>
+				<target>Medien</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.organisations" resname="tx_directory_domain_model_person.organisations">
+				<source>Organisations</source>
+				<target>Organisationen</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.locations" resname="tx_directory_domain_model_person.locations">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.slug" resname="tx_directory_domain_model_person.slug">
+				<source>URL segment</source>
+				<target>URL-Segment</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.seo_title" resname="tx_directory_domain_model_person.seo_title">
+				<source>SEO title</source>
+				<target>SEO-Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_person.seo_description" resname="tx_directory_domain_model_person.seo_description">
+				<source>SEO description</source>
+				<target>SEO-Beschreibung</target>
+			</trans-unit>
+
+			<trans-unit id="tx_directory_domain_model_organisation" resname="tx_directory_domain_model_organisation">
+				<source>Organisation</source>
+				<target>Organisation</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.name" resname="tx_directory_domain_model_organisation.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.short_name" resname="tx_directory_domain_model_organisation.short_name">
+				<source>Short name</source>
+				<target>Kurzname</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.organisation_type" resname="tx_directory_domain_model_organisation.organisation_type">
+				<source>Organisation type</source>
+				<target>Organisationstyp</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.short_description" resname="tx_directory_domain_model_organisation.short_description">
+				<source>Short description</source>
+				<target>Kurzbeschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.description" resname="tx_directory_domain_model_organisation.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.email" resname="tx_directory_domain_model_organisation.email">
+				<source>Email</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.phone" resname="tx_directory_domain_model_organisation.phone">
+				<source>Phone</source>
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.website" resname="tx_directory_domain_model_organisation.website">
+				<source>Website</source>
+				<target>Website</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.social_profile" resname="tx_directory_domain_model_organisation.social_profile">
+				<source>Social profile</source>
+				<target>Social-Profil</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.logo" resname="tx_directory_domain_model_organisation.logo">
+				<source>Logo</source>
+				<target>Logo</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.media" resname="tx_directory_domain_model_organisation.media">
+				<source>Media</source>
+				<target>Medien</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.business_units" resname="tx_directory_domain_model_organisation.business_units">
+				<source>Business Units</source>
+				<target>Geschäftsbereiche</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.locations" resname="tx_directory_domain_model_organisation.locations">
+				<source>Locations</source>
+				<target>Standorte</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.contact_persons" resname="tx_directory_domain_model_organisation.contact_persons">
+				<source>Contact persons</source>
+				<target>Ansprechpartner</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.slug" resname="tx_directory_domain_model_organisation.slug">
+				<source>URL segment</source>
+				<target>URL-Segment</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.seo_title" resname="tx_directory_domain_model_organisation.seo_title">
+				<source>SEO title</source>
+				<target>SEO-Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_organisation.seo_description" resname="tx_directory_domain_model_organisation.seo_description">
+				<source>SEO description</source>
+				<target>SEO-Beschreibung</target>
+			</trans-unit>
+
+			<trans-unit id="tx_directory_domain_model_location" resname="tx_directory_domain_model_location">
+				<source>Address / location</source>
+				<target>Adresse/Standort</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.name" resname="tx_directory_domain_model_location.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.location_type" resname="tx_directory_domain_model_location.location_type">
+				<source>Location type</source>
+				<target>Standorttyp</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.street" resname="tx_directory_domain_model_location.street">
+				<source>Street</source>
+				<target>Straße</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.house_number" resname="tx_directory_domain_model_location.house_number">
+				<source>House number</source>
+				<target>Hausnummer</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.address_addition" resname="tx_directory_domain_model_location.address_addition">
+				<source>Address addition</source>
+				<target>Adresszusatz</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.post_office_box" resname="tx_directory_domain_model_location.post_office_box">
+				<source>PO box</source>
+				<target>Postfach</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.zip" resname="tx_directory_domain_model_location.zip">
+				<source>ZIP</source>
+				<target>PLZ</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.city" resname="tx_directory_domain_model_location.city">
+				<source>City</source>
+				<target>Ort</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.district" resname="tx_directory_domain_model_location.district">
+				<source>District</source>
+				<target>Ortsteil</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.region" resname="tx_directory_domain_model_location.region">
+				<source>Region</source>
+				<target>Region</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.country" resname="tx_directory_domain_model_location.country">
+				<source>Country</source>
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.short_description" resname="tx_directory_domain_model_location.short_description">
+				<source>Short description</source>
+				<target>Kurzbeschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.description" resname="tx_directory_domain_model_location.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.email" resname="tx_directory_domain_model_location.email">
+				<source>Email</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.phone" resname="tx_directory_domain_model_location.phone">
+				<source>Phone</source>
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.website" resname="tx_directory_domain_model_location.website">
+				<source>Website</source>
+				<target>Website</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.opening_hours" resname="tx_directory_domain_model_location.opening_hours">
+				<source>Opening hours</source>
+				<target>Öffnungszeiten</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.special_hours_note" resname="tx_directory_domain_model_location.special_hours_note">
+				<source>Special opening hours</source>
+				<target>Sonderöffnungszeiten</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.directions" resname="tx_directory_domain_model_location.directions">
+				<source>Directions</source>
+				<target>Anreise</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.parking" resname="tx_directory_domain_model_location.parking">
+				<source>Parking</source>
+				<target>Parken</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.accessibility" resname="tx_directory_domain_model_location.accessibility">
+				<source>Accessibility</source>
+				<target>Barrierefreiheit</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.latitude" resname="tx_directory_domain_model_location.latitude">
+				<source>Latitude</source>
+				<target>Breitengrad</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.longitude" resname="tx_directory_domain_model_location.longitude">
+				<source>Longitude</source>
+				<target>Längengrad</target>
+			</trans-unit>
+			<trans-unit id="coordinate.error.range" resname="coordinate.error.range">
+				<source>"{value}" is outside the valid range for "{field}" ({min} to {max}).</source>
+				<target>"{value}" liegt außerhalb des gültigen Bereichs für "{field}" ({min} bis {max}).</target>
+			</trans-unit>
+			<trans-unit id="coordinate.error.format" resname="coordinate.error.format">
+				<source>"{value}" is not a valid coordinate for "{field}". Please enter a number with a point as decimal separator, e.g. {example}.</source>
+				<target>"{value}" ist keine gültige Koordinate für "{field}". Bitte eine Zahl mit Punkt als Dezimaltrenner eingeben, z. B. {example}.</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.media" resname="tx_directory_domain_model_location.media">
+				<source>Media</source>
+				<target>Medien</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.slug" resname="tx_directory_domain_model_location.slug">
+				<source>URL segment</source>
+				<target>URL-Segment</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.seo_title" resname="tx_directory_domain_model_location.seo_title">
+				<source>SEO title</source>
+				<target>SEO-Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_directory_domain_model_location.seo_description" resname="tx_directory_domain_model_location.seo_description">
+				<source>SEO description</source>
+				<target>SEO-Beschreibung</target>
+			</trans-unit>
+
+			<trans-unit id="tt_content.CType.div.directory" resname="tt_content.CType.div.directory">
+				<source>Directory</source>
+				<target>Verzeichnis</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_personlist.title" resname="tt_content.CType.directory_personlist.title">
+				<source>Person list</source>
+				<target>Personenliste</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_personlist.description" resname="tt_content.CType.directory_personlist.description">
+				<source>Lists persons from a storage folder as compact contact, portrait or full profile.</source>
+				<target>Listet Personen aus einem Speicherordner als kompakten Kontakt, Porträt oder vollständiges Profil.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_persondetail.title" resname="tt_content.CType.directory_persondetail.title">
+				<source>Person detail</source>
+				<target>Personendetail</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_persondetail.description" resname="tt_content.CType.directory_persondetail.description">
+				<source>Shows a single person with all available data.</source>
+				<target>Zeigt eine einzelne Person mit allen verfügbaren Daten.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_organisationlist.title" resname="tt_content.CType.directory_organisationlist.title">
+				<source>Organisation list</source>
+				<target>Organisationsliste</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_organisationlist.description" resname="tt_content.CType.directory_organisationlist.description">
+				<source>Lists organisations from a storage folder as compact contact, logo or full profile.</source>
+				<target>Listet Organisationen aus einem Speicherordner als kompakten Kontakt, Logo oder vollständiges Profil.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_organisationshow.title" resname="tt_content.CType.directory_organisationshow.title">
+				<source>Organisation detail</source>
+				<target>Organisationsdetail</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_organisationshow.description" resname="tt_content.CType.directory_organisationshow.description">
+				<source>Shows a single organisation with contact, locations and contact persons.</source>
+				<target>Zeigt eine einzelne Organisation mit Kontakt, Standorten und Ansprechpartnern.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_organisationdetail.title" resname="tt_content.CType.directory_organisationdetail.title">
+				<source>Organisation organigram</source>
+				<target>Organisations-Organigramm</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_organisationdetail.description" resname="tt_content.CType.directory_organisationdetail.description">
+				<source>Shows an organisation with organigram, locations and contact persons.</source>
+				<target>Zeigt eine Organisation mit Organigramm, Standorten und Ansprechpartnern.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_map.title" resname="tt_content.CType.directory_map.title">
+				<source>Location map</source>
+				<target>Standortkarte</target>
+			</trans-unit>
+			<trans-unit id="tt_content.CType.directory_map.description" resname="tt_content.CType.directory_map.description">
+				<source>Interactive map of locations, organisations, contact persons and persons with coordinates.</source>
+				<target>Interaktive Karte mit Standorten, Organisationen, Ansprechpartnern und Personen, die Koordinaten haben.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

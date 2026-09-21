@@ -1,0 +1,23 @@
+mod.web_list.tableDisplayOrder := addToList(tx_directory_domain_model_organisation,tx_directory_domain_model_location,tx_directory_domain_model_person)
+mod.web_directory.tableDisplayOrder := addToList(tx_directory_domain_model_organisation,tx_directory_domain_model_location,tx_directory_domain_model_person)
+
+TCEMAIN.linkHandler {
+    directory_person {
+        handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
+        label = LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:tx_directory_domain_model_person
+        configuration {
+            table = tx_directory_domain_model_person
+        }
+        scanAfter = page
+        iconIdentifier = ext-directory-person
+    }
+    directory_organisation {
+        handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
+        label = LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:tx_directory_domain_model_organisation
+        configuration {
+            table = tx_directory_domain_model_organisation
+        }
+        scanAfter = directory_person
+        iconIdentifier = ext-directory-organisation
+    }
+}

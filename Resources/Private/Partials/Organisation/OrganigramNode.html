@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="directory-organigram__branch{f:if(condition: node.isCurrent, then: ' directory-organigram__branch--current')}">
+    <div class="directory-organigram__node">
+        <f:if condition="{node.url}">
+            <f:then>
+                <a href="{node.url}" class="directory-organigram__card directory-organigram__card--link">
+                    <f:render section="Card" arguments="{node: node}"/>
+                </a>
+            </f:then>
+            <f:else>
+                <div class="directory-organigram__card directory-organigram__card--current">
+                    <f:render section="Card" arguments="{node: node}"/>
+                </div>
+            </f:else>
+        </f:if>
+    </div>
+    <f:if condition="{node.children}">
+        <ul class="directory-organigram__children">
+            <f:for each="{node.children}" as="child">
+                <li class="directory-organigram__child">
+                    <f:render partial="Organisation/OrganigramNode" arguments="{node: child, detailPid: detailPid}"/>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</div>
+
+<f:section name="Card">
+    <span class="directory-organigram__card-name">{node.name}</span>
+    <f:if condition="{node.shortName}">
+        <span class="directory-organigram__card-meta">{node.shortName}</span>
+    </f:if>
+    <f:if condition="{node.organisationType}">
+        <span class="directory-organigram__card-type">
+            <f:translate key="LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.{node.organisationType}"/>
+        </span>
+    </f:if>
+</f:section>
+
+</html>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:directory/Resources/Private/Language/locallang.xlf">
+		<body>
+			<trans-unit id="flexform.sheet.display" resname="flexform.sheet.display">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.source" resname="flexform.sheet.source">
+				<source>Records</source>
+			</trans-unit>
+			<trans-unit id="flexform.displayMode" resname="flexform.displayMode">
+				<source>Content density</source>
+			</trans-unit>
+			<trans-unit id="flexform.displayMode.description" resname="flexform.displayMode.description">
+				<source>Choose how much information each person card shows.</source>
+			</trans-unit>
+			<trans-unit id="flexform.displayMode.compact" resname="flexform.displayMode.compact">
+				<source>Compact — name and contact</source>
+			</trans-unit>
+			<trans-unit id="flexform.displayMode.photo" resname="flexform.displayMode.photo">
+				<source>Portrait — compact with photo</source>
+			</trans-unit>
+			<trans-unit id="flexform.displayMode.full" resname="flexform.displayMode.full">
+				<source>Profile — photo, contact and address</source>
+			</trans-unit>
+			<trans-unit id="flexform.layout" resname="flexform.layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="flexform.layout.description" resname="flexform.layout.description">
+				<source>How the list is arranged on the page.</source>
+			</trans-unit>
+			<trans-unit id="flexform.layout.row" resname="flexform.layout.row">
+				<source>Rows — one person per line</source>
+			</trans-unit>
+			<trans-unit id="flexform.layout.block2" resname="flexform.layout.block2">
+				<source>Cards — 2 columns</source>
+			</trans-unit>
+			<trans-unit id="flexform.layout.block3" resname="flexform.layout.block3">
+				<source>Cards — 3 columns</source>
+			</trans-unit>
+			<trans-unit id="flexform.storagePid" resname="flexform.storagePid">
+				<source>Starting folder</source>
+			</trans-unit>
+			<trans-unit id="flexform.storagePid.description" resname="flexform.storagePid.description">
+				<source>Folder that contains the person records. Leave empty to use the site storage folder.</source>
+			</trans-unit>
+			<trans-unit id="flexform.detailPid" resname="flexform.detailPid">
+				<source>Detail page</source>
+			</trans-unit>
+			<trans-unit id="flexform.detailPid.description" resname="flexform.detailPid.description">
+				<source>Page with the person detail plugin. Links use /profile/{slug} (EN) or /profil/{slug} (DE). Leave empty to use the site detail page or to disable name links.</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.filter" resname="flexform.sheet.filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterMode" resname="flexform.filterMode">
+				<source>Filter output</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterMode.description" resname="flexform.filterMode.description">
+				<source>Frontend shows the selected filter fields. Backend hides the form and applies the values configured here.</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterMode.frontend" resname="flexform.filterMode.frontend">
+				<source>Frontend — visitors can filter</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterMode.backend" resname="flexform.filterMode.backend">
+				<source>Backend — fixed filter, no form</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterQ" resname="flexform.filterQ">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterQ.description" resname="flexform.filterQ.description">
+				<source>Matches last name, first name and position.</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterOrganisation" resname="flexform.filterOrganisation">
+				<source>Organisation</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterOrganisation.description" resname="flexform.filterOrganisation.description">
+				<source>Only persons assigned to this organisation are listed. Leave empty for all organisations in the storage folder.</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterZip" resname="flexform.filterZip">
+				<source>ZIP</source>
+			</trans-unit>
+			<trans-unit id="flexform.filterCity" resname="flexform.filterCity">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="flexform.enabledFilters" resname="flexform.enabledFilters">
+				<source>Frontend filters</source>
+			</trans-unit>
+			<trans-unit id="flexform.enabledFilters.description" resname="flexform.enabledFilters.description">
+				<source>Selected filters appear above the list. Values come from the starting folder or the site storage folder.</source>
+			</trans-unit>
+			<trans-unit id="flexform.enabledFilters.search" resname="flexform.enabledFilters.search">
+				<source>Free text — last name, first name, position</source>
+			</trans-unit>
+			<trans-unit id="flexform.enabledFilters.organisation" resname="flexform.enabledFilters.organisation">
+				<source>Organisation — dropdown</source>
+			</trans-unit>
+			<trans-unit id="flexform.enabledFilters.address" resname="flexform.enabledFilters.address">
+				<source>Address — ZIP and city</source>
+			</trans-unit>
+
+			<trans-unit id="list.empty" resname="list.empty">
+				<source>No persons found.</source>
+			</trans-unit>
+			<trans-unit id="filter.q" resname="filter.q">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="filter.organisation" resname="filter.organisation">
+				<source>Organisation</source>
+			</trans-unit>
+			<trans-unit id="filter.organisation.all" resname="filter.organisation.all">
+				<source>All organisations</source>
+			</trans-unit>
+			<trans-unit id="filter.zip" resname="filter.zip">
+				<source>ZIP</source>
+			</trans-unit>
+			<trans-unit id="filter.city" resname="filter.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="filter.submit" resname="filter.submit">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="filter.reset" resname="filter.reset">
+				<source>Reset</source>
+			</trans-unit>
+			<trans-unit id="filter.results" resname="filter.results">
+				<source>%d persons</source>
+			</trans-unit>
+			<trans-unit id="filter.results.one" resname="filter.results.one">
+				<source>1 person</source>
+			</trans-unit>
+			<trans-unit id="filter.empty" resname="filter.empty">
+				<source>No persons match these filters.</source>
+			</trans-unit>
+			<trans-unit id="list.readMore" resname="list.readMore">
+				<source>Read more</source>
+			</trans-unit>
+			<trans-unit id="detail.empty" resname="detail.empty">
+				<source>No person selected.</source>
+			</trans-unit>
+			<trans-unit id="detail.back" resname="detail.back">
+				<source>Back to list</source>
+			</trans-unit>
+			<trans-unit id="flexform.listPid" resname="flexform.listPid">
+				<source>List page</source>
+			</trans-unit>
+			<trans-unit id="flexform.listPid.description" resname="flexform.listPid.description">
+				<source>Page with the person list plugin. Used for the back link. Leave empty to use the site list page or the parent page.</source>
+			</trans-unit>
+			<trans-unit id="label.email" resname="label.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="label.phone" resname="label.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="label.mobile" resname="label.mobile">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="label.website" resname="label.website">
+				<source>Website</source>
+			</trans-unit>
+			<trans-unit id="label.socialProfile" resname="label.socialProfile">
+				<source>Social profile</source>
+			</trans-unit>
+			<trans-unit id="label.identifier" resname="label.identifier">
+				<source>Identifier</source>
+			</trans-unit>
+			<trans-unit id="label.displayName" resname="label.displayName">
+				<source>Display name</source>
+			</trans-unit>
+			<trans-unit id="label.contact" resname="label.contact">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="label.organisations" resname="label.organisations">
+				<source>Organisations</source>
+			</trans-unit>
+			<trans-unit id="label.addresses" resname="label.addresses">
+				<source>Addresses</source>
+			</trans-unit>
+			<trans-unit id="label.address" resname="label.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="label.description" resname="label.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="label.media" resname="label.media">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="label.postOfficeBox" resname="label.postOfficeBox">
+				<source>P.O. box</source>
+			</trans-unit>
+			<trans-unit id="portrait.alt" resname="portrait.alt">
+				<source>Portrait of {0}</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.organisation.displayMode" resname="flexform.organisation.displayMode">
+				<source>Content density</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.displayMode.description" resname="flexform.organisation.displayMode.description">
+				<source>Choose how much information each organisation card shows.</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.displayMode.compact" resname="flexform.organisation.displayMode.compact">
+				<source>Compact — name and contact</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.displayMode.logo" resname="flexform.organisation.displayMode.logo">
+				<source>Logo — compact with logo</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.displayMode.full" resname="flexform.organisation.displayMode.full">
+				<source>Profile — logo, contact and address</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.layout.row" resname="flexform.organisation.layout.row">
+				<source>Rows — one organisation per line</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisationTypes" resname="flexform.organisationTypes">
+				<source>Organisation types</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisationTypes.description" resname="flexform.organisationTypes.description">
+				<source>Only selected types are listed. Leave empty to show companies, authorities, associations, institutions and other organisations.</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.storagePid" resname="flexform.organisation.storagePid">
+				<source>Starting folder</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.storagePid.description" resname="flexform.organisation.storagePid.description">
+				<source>Folder that contains the organisation records. Leave empty to use the site storage folder.</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.detailPid" resname="flexform.organisation.detailPid">
+				<source>Detail page</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.detailPid.description" resname="flexform.organisation.detailPid.description">
+				<source>Page with the organisation detail plugin. Links use /organization/{slug} (EN) or /organisation/{slug} (DE). Leave empty to use the site detail page or to disable name links.</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.record" resname="flexform.organisation.record">
+				<source>Organisation</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.record.description" resname="flexform.organisation.record.description">
+				<source>Optional. Used when this plugin is not opened via /organisation/{slug}.</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.organigram.record.description" resname="flexform.organisation.organigram.record.description">
+				<source>Organisation shown in this organigram. Leave empty only when the record is selected elsewhere on this page.</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.listPid" resname="flexform.organisation.listPid">
+				<source>List page</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.listPid.description" resname="flexform.organisation.listPid.description">
+				<source>Page with the organisation list plugin. Used for the back link. Leave empty to use the site list page or the parent page.</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.enabledFilters" resname="flexform.organisation.enabledFilters">
+				<source>Frontend filters</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.enabledFilters.description" resname="flexform.organisation.enabledFilters.description">
+				<source>Selected filters appear above the list. Organisation types in the dropdown come from the Records tab.</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.enabledFilters.search" resname="flexform.organisation.enabledFilters.search">
+				<source>Free text — name, short name, identifier</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.enabledFilters.type" resname="flexform.organisation.enabledFilters.type">
+				<source>Organisation type — dropdown</source>
+			</trans-unit>
+			<trans-unit id="flexform.organisation.enabledFilters.address" resname="flexform.organisation.enabledFilters.address">
+				<source>Address — ZIP and city</source>
+			</trans-unit>
+			<trans-unit id="flexform.personDetailPid" resname="flexform.personDetailPid">
+				<source>Person detail page</source>
+			</trans-unit>
+			<trans-unit id="flexform.personDetailPid.description" resname="flexform.personDetailPid.description">
+				<source>Page with the person detail plugin. Used for contact person links.</source>
+			</trans-unit>
+			<trans-unit id="organisation.list.empty" resname="organisation.list.empty">
+				<source>No organisations found.</source>
+			</trans-unit>
+			<trans-unit id="organisation.list.readMore" resname="organisation.list.readMore">
+				<source>Read more</source>
+			</trans-unit>
+			<trans-unit id="organisation.detail.empty" resname="organisation.detail.empty">
+				<source>No organisation selected.</source>
+			</trans-unit>
+			<trans-unit id="organisation.filter.type" resname="organisation.filter.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="organisation.filter.type.all" resname="organisation.filter.type.all">
+				<source>All types</source>
+			</trans-unit>
+			<trans-unit id="organisation.filter.results" resname="organisation.filter.results">
+				<source>%d organisations</source>
+			</trans-unit>
+			<trans-unit id="organisation.filter.results.one" resname="organisation.filter.results.one">
+				<source>1 organisation</source>
+			</trans-unit>
+			<trans-unit id="organisation.filter.empty" resname="organisation.filter.empty">
+				<source>No organisations match these filters.</source>
+			</trans-unit>
+			<trans-unit id="organisation.sections.label" resname="organisation.sections.label">
+				<source>Organisation sections</source>
+			</trans-unit>
+			<trans-unit id="organisation.section.structure" resname="organisation.section.structure">
+				<source>Structure</source>
+			</trans-unit>
+			<trans-unit id="organisation.section.locations" resname="organisation.section.locations">
+				<source>Locations</source>
+			</trans-unit>
+			<trans-unit id="organisation.section.contacts" resname="organisation.section.contacts">
+				<source>Contact persons</source>
+			</trans-unit>
+			<trans-unit id="organisation.organigram.empty" resname="organisation.organigram.empty">
+				<source>No organisational structure available.</source>
+			</trans-unit>
+			<trans-unit id="organisation.locations.empty" resname="organisation.locations.empty">
+				<source>No locations available.</source>
+			</trans-unit>
+			<trans-unit id="organisation.contacts.empty" resname="organisation.contacts.empty">
+				<source>No contact persons available.</source>
+			</trans-unit>
+			<trans-unit id="label.shortName" resname="label.shortName">
+				<source>Short name</source>
+			</trans-unit>
+			<trans-unit id="label.openingHours" resname="label.openingHours">
+				<source>Opening hours</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.map.sheet.content" resname="flexform.map.sheet.content">
+				<source>Map content</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.markerKinds" resname="flexform.map.markerKinds">
+				<source>What appears on the map</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.markerKinds.description" resname="flexform.map.markerKinds.description">
+				<source>Combine sources. Only records with coordinates become markers. Private addresses appear only for contact persons and persons, unless you explicitly include the private location type.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.markerKinds.locations" resname="flexform.map.markerKinds.locations">
+				<source>Locations — by location type</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.markerKinds.organisations" resname="flexform.map.markerKinds.organisations">
+				<source>Organisations — selected organisations and their locations</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.markerKinds.contacts" resname="flexform.map.markerKinds.contacts">
+				<source>Contact persons — private addresses of the organisation contacts</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.markerKinds.persons" resname="flexform.map.markerKinds.persons">
+				<source>Persons — private addresses</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.locationTypes" resname="flexform.map.locationTypes">
+				<source>Location types</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.locationTypes.description" resname="flexform.map.locationTypes.description">
+				<source>Applies to the Locations source. Company, POI and other are public. Private addresses belong to persons and should stay off overview maps.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.locationTypes.private" resname="flexform.map.locationTypes.private">
+				<source>Private address — only if these locations should appear as standalone location markers</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.organisations" resname="flexform.map.organisations">
+				<source>Organisations</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.organisations.description" resname="flexform.map.organisations.description">
+				<source>Limits Organisations and Contact persons. Leave empty to use every organisation in the starting folder.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.includeSubUnits" resname="flexform.map.includeSubUnits">
+				<source>Include departments and organisational units</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.includeSubUnits.description" resname="flexform.map.includeSubUnits.description">
+				<source>Adds the whole subtree of the selected organisations: locations and contact persons of departments and units.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.persons" resname="flexform.map.persons">
+				<source>Persons</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.persons.description" resname="flexform.map.persons.description">
+				<source>Optional. Limits the Persons source. Leave empty for every person with coordinates in the starting folder.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.storagePid" resname="flexform.map.storagePid">
+				<source>Starting folder</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.storagePid.description" resname="flexform.map.storagePid.description">
+				<source>Folder that contains location, organisation and person records. Leave empty to use the site storage folder.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.organisationDetailPid" resname="flexform.map.organisationDetailPid">
+				<source>Organisation detail page</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.organisationDetailPid.description" resname="flexform.map.organisationDetailPid.description">
+				<source>Used for organisation links in popups. Leave empty to use the site organisation detail page.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.personDetailPid.description" resname="flexform.map.personDetailPid.description">
+				<source>Used for person and contact links in popups. Leave empty to use the site person detail page.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.height" resname="flexform.map.height">
+				<source>Map height</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.height.360" resname="flexform.map.height.360">
+				<source>Compact — 360 px</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.height.480" resname="flexform.map.height.480">
+				<source>Default — 480 px</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.height.640" resname="flexform.map.height.640">
+				<source>Tall — 640 px</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.height.800" resname="flexform.map.height.800">
+				<source>Extra tall — 800 px</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.showLegend" resname="flexform.map.showLegend">
+				<source>Show legend</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.showList" resname="flexform.map.showList">
+				<source>Show accessible list</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.showList.description" resname="flexform.map.showList.description">
+				<source>Lists the same entries below the map so the content stays usable without the map.</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.requireConsent" resname="flexform.map.requireConsent">
+				<source>Load map tiles only after consent</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.requireConsent.description" resname="flexform.map.requireConsent.description">
+				<source>Shows a button first. OpenStreetMap tiles are requested only after the visitor confirms.</source>
+			</trans-unit>
+			<trans-unit id="map.empty" resname="map.empty">
+				<source>No map markers found. Records need coordinates.</source>
+			</trans-unit>
+			<trans-unit id="map.results" resname="map.results">
+				<source>%d map entries</source>
+			</trans-unit>
+			<trans-unit id="map.results.one" resname="map.results.one">
+				<source>1 map entry</source>
+			</trans-unit>
+			<trans-unit id="map.legend" resname="map.legend">
+				<source>Legend</source>
+			</trans-unit>
+			<trans-unit id="map.list.title" resname="map.list.title">
+				<source>Entries on this map</source>
+			</trans-unit>
+			<trans-unit id="map.kind.locations" resname="map.kind.locations">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="map.kind.organisations" resname="map.kind.organisations">
+				<source>Organisation</source>
+			</trans-unit>
+			<trans-unit id="map.kind.contacts" resname="map.kind.contacts">
+				<source>Contact person</source>
+			</trans-unit>
+			<trans-unit id="map.kind.persons" resname="map.kind.persons">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="map.details" resname="map.details">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="map.route" resname="map.route">
+				<source>Directions</source>
+			</trans-unit>
+			<trans-unit id="map.consent.text" resname="map.consent.text">
+				<source>The map loads tiles from OpenStreetMap. Confirm to display the map.</source>
+			</trans-unit>
+			<trans-unit id="map.consent.button" resname="map.consent.button">
+				<source>Load map</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

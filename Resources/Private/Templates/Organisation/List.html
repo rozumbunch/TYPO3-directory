@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <div class="directory-organisation-list directory-organisation-list--layout-{layout} directory-organisation-list--display-{displayMode}">
+        <f:if condition="{showFilter}">
+            <f:render partial="Organisation/Filter" arguments="{
+                filter: filter,
+                typeOptions: typeOptions,
+                showSearchFilter: showSearchFilter,
+                showTypeFilter: showTypeFilter,
+                showAddressFilter: showAddressFilter,
+                pluginNamespace: pluginNamespace
+            }"/>
+        </f:if>
+
+        <f:if condition="{showFilter}">
+            <p class="directory-organisation-list__count" aria-live="polite">
+                <f:if condition="{resultCount} == 1">
+                    <f:then>
+                        <f:translate key="organisation.filter.results.one" extensionName="Directory"/>
+                    </f:then>
+                    <f:else>
+                        <f:translate key="organisation.filter.results" extensionName="Directory" arguments="{0: resultCount}"/>
+                    </f:else>
+                </f:if>
+            </p>
+        </f:if>
+
+        <f:if condition="{organisations}">
+            <f:then>
+                <ul class="directory-organisation-list__items">
+                    <f:for each="{organisations}" as="organisation">
+                        <li class="directory-organisation-list__item">
+                            <f:render partial="Organisation/Item" arguments="{
+                                organisation: organisation,
+                                displayMode: displayMode,
+                                detailPid: detailPid
+                            }"/>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                <p class="directory-organisation-list__empty">
+                    <f:if condition="{filter.active}">
+                        <f:then>
+                            <f:translate key="organisation.filter.empty" extensionName="Directory"/>
+                        </f:then>
+                        <f:else>
+                            <f:translate key="organisation.list.empty" extensionName="Directory"/>
+                        </f:else>
+                    </f:if>
+                </p>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+
+</html>

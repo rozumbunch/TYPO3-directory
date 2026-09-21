@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{isDetail}">
+    <f:then>
+        <h1 class="directory-organisation__name directory-organisation__name--detail">
+            {organisation.name}
+        </h1>
+    </f:then>
+    <f:else>
+        <h3 class="directory-organisation__name">
+            <f:if condition="{detailPid}">
+                <f:then>
+                    <f:link.action
+                        action="show"
+                        controller="Organisation"
+                        pluginName="OrganisationShow"
+                        extensionName="Directory"
+                        pageUid="{detailPid}"
+                        arguments="{organisation: organisation}"
+                        class="directory-organisation__name-link"
+                    >
+                        {organisation.name}
+                    </f:link.action>
+                </f:then>
+                <f:else>
+                    {organisation.name}
+                </f:else>
+            </f:if>
+        </h3>
+    </f:else>
+</f:if>
+
+</html>

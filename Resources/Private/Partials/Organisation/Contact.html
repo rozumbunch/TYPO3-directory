@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{organisation.email} || {organisation.phone} || {organisation.website} || ({extended} && {organisation.socialProfile})">
+    <dl class="directory-organisation__facts">
+        <f:if condition="{organisation.email}">
+            <div class="directory-organisation__fact">
+                <dt><f:translate key="label.email" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{organisation.email}" class="directory-organisation__link"/></dd>
+            </div>
+        </f:if>
+        <f:if condition="{organisation.phone}">
+            <div class="directory-organisation__fact">
+                <dt><f:translate key="label.phone" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{organisation.phone}" class="directory-organisation__link"/></dd>
+            </div>
+        </f:if>
+        <f:if condition="{organisation.website}">
+            <div class="directory-organisation__fact">
+                <dt><f:translate key="label.website" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{organisation.website}" class="directory-organisation__link"/></dd>
+            </div>
+        </f:if>
+        <f:if condition="{extended} && {organisation.socialProfile}">
+            <div class="directory-organisation__fact">
+                <dt><f:translate key="label.socialProfile" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{organisation.socialProfile}" class="directory-organisation__link"/></dd>
+            </div>
+        </f:if>
+    </dl>
+</f:if>
+
+</html>

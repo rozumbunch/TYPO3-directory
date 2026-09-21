@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{person.email} || {person.phone} || {person.website} || ({extended} && ({person.mobile} || {person.socialProfile}))">
+    <dl class="directory-person__facts">
+        <f:if condition="{person.email}">
+            <div class="directory-person__fact">
+                <dt><f:translate key="label.email" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{person.email}" class="directory-person__link"/></dd>
+            </div>
+        </f:if>
+        <f:if condition="{person.phone}">
+            <div class="directory-person__fact">
+                <dt><f:translate key="label.phone" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{person.phone}" class="directory-person__link"/></dd>
+            </div>
+        </f:if>
+        <f:if condition="{extended} && {person.mobile}">
+            <div class="directory-person__fact">
+                <dt><f:translate key="label.mobile" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{person.mobile}" class="directory-person__link"/></dd>
+            </div>
+        </f:if>
+        <f:if condition="{person.website}">
+            <div class="directory-person__fact">
+                <dt><f:translate key="label.website" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{person.website}" class="directory-person__link"/></dd>
+            </div>
+        </f:if>
+        <f:if condition="{extended} && {person.socialProfile}">
+            <div class="directory-person__fact">
+                <dt><f:translate key="label.socialProfile" extensionName="Directory"/></dt>
+                <dd><f:link.typolink parameter="{person.socialProfile}" class="directory-person__link"/></dd>
+            </div>
+        </f:if>
+    </dl>
+</f:if>
+
+</html>

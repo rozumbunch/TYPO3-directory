@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<figure class="directory-organisation__logo">
+    <f:if condition="{detailPid}">
+        <f:then>
+            <f:link.action
+                action="show"
+                controller="Organisation"
+                pluginName="OrganisationShow"
+                extensionName="Directory"
+                pageUid="{detailPid}"
+                arguments="{organisation: organisation}"
+                class="directory-organisation__logo-link"
+                additionalAttributes="{title: organisation.name, 'aria-label': organisation.name}"
+            >
+                <f:render section="Image" arguments="{organisation: organisation, maxWidth: maxWidth}"/>
+            </f:link.action>
+        </f:then>
+        <f:else>
+            <f:render section="Image" arguments="{organisation: organisation, maxWidth: maxWidth}"/>
+        </f:else>
+    </f:if>
+</figure>
+
+<f:section name="Image">
+    <f:if condition="{organisation.logo}">
+        <f:then>
+            <f:image
+                image="{organisation.logo}"
+                maxWidth="{f:if(condition: maxWidth, then: maxWidth, else: 240)}"
+                class="directory-organisation__mark"
+                alt="{organisation.name}"
+            />
+        </f:then>
+        <f:else>
+            <span class="directory-organisation__mark directory-organisation__mark--fallback" aria-hidden="true">
+                {organisation.initials}
+            </span>
+        </f:else>
+    </f:if>
+</f:section>
+
+</html>

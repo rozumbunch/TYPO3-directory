@@ -1,0 +1,30 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Rozumbunch\Directory\:
+    resource: '../Classes/*'
+    exclude:
+      - '../Classes/Domain/Model/*'
+      - '../Classes/Configuration/*'
+      - '../Classes/Dummy/*'
+
+  Rozumbunch\Directory\Controller\DirectoryModuleController:
+    public: true
+
+  Rozumbunch\Directory\Controller\PersonController:
+    public: true
+
+  Rozumbunch\Directory\Controller\OrganisationController:
+    public: true
+
+  Rozumbunch\Directory\Controller\MapController:
+    public: true
+
+  Rozumbunch\Directory\PageTitle\DirectoryPageTitleProvider:
+    public: true
+
+  Rozumbunch\Directory\UserFunction\RecordLabel:
+    public: true

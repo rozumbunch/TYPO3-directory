@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<figure class="directory-person__portrait">
+    <f:if condition="{detailPid}">
+        <f:then>
+            <f:link.action
+                action="show"
+                controller="Person"
+                pluginName="PersonDetail"
+                extensionName="Directory"
+                pageUid="{detailPid}"
+                arguments="{person: person}"
+                class="directory-person__portrait-link"
+                additionalAttributes="{title: person.fullName, 'aria-label': person.fullName}"
+            >
+                <f:render section="Image" arguments="{person: person, maxWidth: maxWidth}"/>
+            </f:link.action>
+        </f:then>
+        <f:else>
+            <f:render section="Image" arguments="{person: person, maxWidth: maxWidth}"/>
+        </f:else>
+    </f:if>
+</figure>
+
+<f:section name="Image">
+    <f:if condition="{person.image}">
+        <f:then>
+            <f:image
+                image="{person.image}"
+                maxWidth="{f:if(condition: maxWidth, then: maxWidth, else: 480)}"
+                class="directory-person__photo"
+                alt="{person.fullName}"
+            />
+        </f:then>
+        <f:else>
+            <f:image
+                src="EXT:directory/Resources/Public/Content/dummy-person.png"
+                maxWidth="{f:if(condition: maxWidth, then: maxWidth, else: 480)}"
+                class="directory-person__photo directory-person__photo--placeholder"
+                alt="{person.fullName}"
+            />
+        </f:else>
+    </f:if>
+</f:section>
+
+</html>

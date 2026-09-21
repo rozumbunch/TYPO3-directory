@@ -1,0 +1,113 @@
+plugin.tx_directory {
+    view {
+        templateRootPaths {
+            10 = EXT:directory/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            10 = EXT:directory/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            10 = EXT:directory/Resources/Private/Layouts/
+        }
+    }
+    persistence {
+        storagePid = {$directory.storagePid}
+    }
+    settings {
+        displayMode = compact
+        layout = row
+        detailPid = {$directory.personDetailPid}
+    }
+}
+
+# Direct EXTBASEPLUGIN so USER_INT list filters work with PAGEVIEW/contentArea
+tt_content.directory_personlist = EXTBASEPLUGIN
+tt_content.directory_personlist {
+    extensionName = Directory
+    pluginName = PersonList
+}
+
+tt_content.directory_organisationlist = EXTBASEPLUGIN
+tt_content.directory_organisationlist {
+    extensionName = Directory
+    pluginName = OrganisationList
+}
+
+plugin.tx_directory_personlist {
+    view < plugin.tx_directory.view
+    persistence < plugin.tx_directory.persistence
+    settings < plugin.tx_directory.settings
+    settings.filterMode = frontend
+    settings.enabledFilters = search,organisation,address
+}
+
+plugin.tx_directory_persondetail {
+    view < plugin.tx_directory.view
+    persistence < plugin.tx_directory.persistence
+    settings < plugin.tx_directory.settings
+    settings.listPid = {$directory.personListPid}
+}
+
+plugin.tx_directory_organisationlist {
+    view < plugin.tx_directory.view
+    persistence < plugin.tx_directory.persistence
+    settings {
+        displayMode = compact
+        layout = row
+        organisationTypes = company,authority,association,institution,other
+        enabledFilters = search,type,address
+        detailPid = {$directory.organisationDetailPid}
+        personDetailPid = {$directory.personDetailPid}
+    }
+}
+
+plugin.tx_directory_organisationshow {
+    view < plugin.tx_directory.view
+    persistence < plugin.tx_directory.persistence
+    settings {
+        listPid = {$directory.organisationListPid}
+        personDetailPid = {$directory.personDetailPid}
+    }
+}
+
+plugin.tx_directory_organisationdetail {
+    view < plugin.tx_directory.view
+    persistence < plugin.tx_directory.persistence
+    settings {
+        detailPid = {$directory.organisationDetailPid}
+        personDetailPid = {$directory.personDetailPid}
+    }
+}
+
+plugin.tx_directory_map {
+    view < plugin.tx_directory.view
+    persistence < plugin.tx_directory.persistence
+    settings {
+        markerKinds = locations,organisations
+        locationTypes = company,poi,other
+        includeSubUnits = 1
+        height = 480
+        showLegend = 1
+        showList = 1
+        requireConsent = 1
+        organisationDetailPid = {$directory.organisationDetailPid}
+        personDetailPid = {$directory.personDetailPid}
+    }
+}
+
+config.recordLinks {
+    directory_person {
+        typolink {
+            parameter = {$directory.personDetailPid}
+            additionalParams.data = field:uid
+            additionalParams.wrap = &tx_directory_persondetail[action]=show&tx_directory_persondetail[controller]=Person&tx_directory_persondetail[person]=|
+        }
+    }
+    directory_organisation {
+        typolink {
+            parameter = {$directory.organisationDetailPid}
+            additionalParams.data = field:uid
+            additionalParams.wrap = &tx_directory_organisationshow[action]=show&tx_directory_organisationshow[controller]=Organisation&tx_directory_organisationshow[organisation]=|
+        }
+    }
+}

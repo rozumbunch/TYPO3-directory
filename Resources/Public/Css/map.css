@@ -1,0 +1,262 @@
+.directory-map {
+    --directory-fg: #1c1917;
+    --directory-fg-muted: #57534e;
+    --directory-fg-soft: #78716c;
+    --directory-border: #e7e5e4;
+    --directory-bg: #fafaf9;
+    --directory-bg-card: #ffffff;
+    --directory-accent: #ff8139;
+    --directory-link: #1c1917;
+    --directory-link-hover: #44403c;
+    --directory-radius: 0.85rem;
+    --directory-map-height: 480px;
+    --directory-map-org: #1c1917;
+    --directory-map-location: #ff8139;
+    --directory-map-contact: #0ba099;
+    --directory-map-person: #5f4593;
+    color: var(--directory-fg);
+    line-height: 1.5;
+}
+
+.directory-map__count,
+.directory-map__empty {
+    margin: 0 0 0.85rem;
+    color: var(--directory-fg-muted);
+    font-size: 0.9rem;
+}
+
+.directory-map__viewport {
+    position: relative;
+    min-height: var(--directory-map-height);
+    border: 1px solid var(--directory-border);
+    border-radius: var(--directory-radius);
+    overflow: hidden;
+    background: var(--directory-bg);
+}
+
+.directory-map__canvas {
+    height: var(--directory-map-height);
+    width: 100%;
+}
+
+.directory-map__canvas--pending {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.directory-map__consent {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    background:
+        linear-gradient(180deg, rgba(250, 250, 249, 0.92), rgba(250, 250, 249, 0.96)),
+        repeating-linear-gradient(
+            -32deg,
+            #f5f5f4 0 12px,
+            #eceae8 12px 24px
+        );
+}
+
+.directory-map__consent-text {
+    margin: 0;
+    max-width: 36rem;
+    color: var(--directory-fg-muted);
+}
+
+.directory-map__consent-button,
+.directory-map-card__link,
+.directory-map-card__facts a {
+    color: var(--directory-link);
+}
+
+.directory-map__consent-button {
+    appearance: none;
+    justify-self: center;
+    margin: 0;
+    padding: 0.7rem 1.15rem;
+    border: 1px solid var(--directory-fg);
+    border-radius: 0.45rem;
+    background: var(--directory-fg);
+    color: #fff;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.directory-map__consent-button:hover,
+.directory-map__consent-button:focus-visible {
+    background: var(--directory-link-hover);
+    border-color: var(--directory-link-hover);
+}
+
+.directory-map__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    list-style: none;
+    margin: 0.85rem 0 0;
+    padding: 0;
+    color: var(--directory-fg-muted);
+    font-size: 0.9rem;
+}
+
+.directory-map__legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.directory-map__legend-pin,
+.directory-map-marker__pin {
+    display: block;
+    width: 0.85rem;
+    height: 0.85rem;
+    border: 2px solid #fff;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 1px 4px rgba(28, 25, 23, 0.28);
+    background: var(--directory-map-location);
+}
+
+.directory-map__legend-item--organisations .directory-map__legend-pin,
+.directory-map-marker--organisations .directory-map-marker__pin {
+    background: var(--directory-map-org);
+}
+
+.directory-map__legend-item--locations .directory-map__legend-pin,
+.directory-map-marker--locations .directory-map-marker__pin {
+    background: var(--directory-map-location);
+}
+
+.directory-map__legend-item--contacts .directory-map__legend-pin,
+.directory-map-marker--contacts .directory-map-marker__pin {
+    background: var(--directory-map-contact);
+}
+
+.directory-map__legend-item--persons .directory-map__legend-pin,
+.directory-map-marker--persons .directory-map-marker__pin {
+    background: var(--directory-map-person);
+}
+
+.directory-map-marker {
+    background: none;
+    border: 0;
+}
+
+.directory-map-marker__pin {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin: 0.2rem 0 0 0.2rem;
+}
+
+.directory-map__list {
+    margin: 1.5rem 0 0;
+}
+
+.directory-map__list-title {
+    margin: 0 0 0.85rem;
+    font-size: 1.05rem;
+}
+
+.directory-map__list-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.directory-map-card {
+    height: 100%;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--directory-border);
+    border-radius: var(--directory-radius);
+    background: var(--directory-bg-card);
+}
+
+.directory-map-card__kind {
+    margin: 0 0 0.35rem;
+    color: var(--directory-fg-soft);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.directory-map-card__title {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.directory-map-card__subtitle,
+.directory-map-card__related,
+.directory-map-card__address,
+.directory-map-card__summary {
+    margin: 0.35rem 0 0;
+    color: var(--directory-fg-muted);
+}
+
+.directory-map-card__address {
+    font-style: normal;
+}
+
+.directory-map-card__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.85rem;
+    list-style: none;
+    margin: 0.7rem 0 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.directory-map-card__facts a {
+    font-weight: 650;
+    text-decoration: underline;
+}
+
+.directory-map-card__link:hover,
+.directory-map-card__facts a:hover,
+.directory-map-card__link:focus-visible,
+.directory-map-card__facts a:focus-visible {
+    color: var(--directory-link-hover);
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: var(--directory-bg-card);
+    color: var(--directory-fg);
+    box-shadow: 0 10px 30px rgba(28, 25, 23, 0.16);
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 0.85rem;
+    padding: 0;
+}
+
+.leaflet-popup-content {
+    margin: 0;
+    min-width: 16rem;
+}
+
+.leaflet-popup-content .directory-map-card {
+    border: 0;
+    border-radius: 0.85rem;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: var(--directory-fg-muted);
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+    color: var(--directory-fg);
+}

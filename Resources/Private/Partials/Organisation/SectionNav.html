@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<nav class="directory-organisation-detail__nav" aria-label="{f:translate(key: 'organisation.sections.label', extensionName: 'Directory')}">
+    <f:render section="Link" arguments="{
+        organisation: organisation,
+        sectionKey: 'structure',
+        current: section,
+        labelKey: 'organisation.section.structure'
+    }"/>
+    <f:render section="Link" arguments="{
+        organisation: organisation,
+        sectionKey: 'locations',
+        current: section,
+        labelKey: 'organisation.section.locations'
+    }"/>
+    <f:render section="Link" arguments="{
+        organisation: organisation,
+        sectionKey: 'contacts',
+        current: section,
+        labelKey: 'organisation.section.contacts'
+    }"/>
+</nav>
+
+<f:section name="Link">
+    <f:link.action
+        action="organigram"
+        controller="Organisation"
+        pluginName="OrganisationDetail"
+        extensionName="Directory"
+        arguments="{organisation: organisation, section: sectionKey}"
+        class="directory-organisation-detail__nav-link{f:if(condition: '{current} == {sectionKey}', then: ' is-active')}"
+    >
+        <f:translate key="{labelKey}" extensionName="Directory"/>
+    </f:link.action>
+</f:section>
+
+</html>

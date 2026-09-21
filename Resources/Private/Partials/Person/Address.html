@@ -1,0 +1,50 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{location}">
+    <f:variable name="hasAddress" value="{location.name}{location.street}{location.houseNumber}{location.addressAddition}{location.postOfficeBox}{location.zip}{location.city}{location.district}{location.region}{location.country}"/>
+    <f:if condition="{hasAddress}">
+        <section class="directory-person__address{f:if(condition: extended, then: ' directory-person__address--extended')}">
+            <f:if condition="{extended} && {location.name}">
+                <h3 class="directory-person__address-name">{location.name}</h3>
+            </f:if>
+            <f:if condition="!{extended}">
+                <h4 class="directory-person__address-title">
+                    <f:translate key="label.address" extensionName="Directory"/>
+                </h4>
+            </f:if>
+            <address class="directory-person__address-body">
+                <f:if condition="{location.street} || {location.houseNumber}">
+                    <span class="directory-person__address-line">
+                        {location.street} {location.houseNumber}
+                    </span>
+                </f:if>
+                <f:if condition="{location.addressAddition}">
+                    <span class="directory-person__address-line">{location.addressAddition}</span>
+                </f:if>
+                <f:if condition="{extended} && {location.postOfficeBox}">
+                    <span class="directory-person__address-line">
+                        <f:translate key="label.postOfficeBox" extensionName="Directory"/>
+                        {location.postOfficeBox}
+                    </span>
+                </f:if>
+                <f:if condition="{location.zip} || {location.city}">
+                    <span class="directory-person__address-line">
+                        {location.zip} {location.city}
+                    </span>
+                </f:if>
+                <f:if condition="{extended} && {location.district}">
+                    <span class="directory-person__address-line">{location.district}</span>
+                </f:if>
+                <f:if condition="{extended} && {location.region}">
+                    <span class="directory-person__address-line">{location.region}</span>
+                </f:if>
+                <f:if condition="{location.country}">
+                    <span class="directory-person__address-line">{location.country}</span>
+                </f:if>
+            </address>
+        </section>
+    </f:if>
+</f:if>
+
+</html>

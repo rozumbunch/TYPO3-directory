@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <sheetTitle>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.sheet.display</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.displayMode>
+                        <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.displayMode</label>
+                        <description>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.displayMode.description</description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>compact</default>
+                            <items>
+                                <numIndex index="0">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.displayMode.compact</label>
+                                    <value>compact</value>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.displayMode.logo</label>
+                                    <value>logo</value>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.displayMode.full</label>
+                                    <value>full</value>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.displayMode>
+                    <settings.layout>
+                        <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.layout</label>
+                        <description>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.layout.description</description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>row</default>
+                            <items>
+                                <numIndex index="0">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.layout.row</label>
+                                    <value>row</value>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.layout.block2</label>
+                                    <value>block-2</value>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.layout.block3</label>
+                                    <value>block-3</value>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.layout>
+                </el>
+            </ROOT>
+        </sDEF>
+        <sSOURCE>
+            <ROOT>
+                <sheetTitle>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.sheet.source</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.organisationTypes>
+                        <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisationTypes</label>
+                        <description>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisationTypes.description</description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectCheckBox</renderType>
+                            <minitems>0</minitems>
+                            <maxitems>99</maxitems>
+                            <default>company,authority,association,institution,other</default>
+                            <items>
+                                <numIndex index="0">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.company</label>
+                                    <value>company</value>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.authority</label>
+                                    <value>authority</value>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.association</label>
+                                    <value>association</value>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.institution</label>
+                                    <value>institution</value>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.department</label>
+                                    <value>department</value>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.orgunit</label>
+                                    <value>orgunit</value>
+                                </numIndex>
+                                <numIndex index="6">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.other</label>
+                                    <value>other</value>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.organisationTypes>
+                    <persistence.storagePid>
+                        <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.storagePid</label>
+                        <description>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.storagePid.description</description>
+                        <config>
+                            <type>group</type>
+                            <allowed>pages</allowed>
+                            <size>1</size>
+                            <maxitems>1</maxitems>
+                            <minitems>0</minitems>
+                            <suggestOptions>
+                                <default>
+                                    <additionalSearchFields>nav_title,alias,url</additionalSearchFields>
+                                </default>
+                            </suggestOptions>
+                        </config>
+                    </persistence.storagePid>
+                    <settings.detailPid>
+                        <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.detailPid</label>
+                        <description>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.detailPid.description</description>
+                        <config>
+                            <type>group</type>
+                            <allowed>pages</allowed>
+                            <size>1</size>
+                            <maxitems>1</maxitems>
+                            <minitems>0</minitems>
+                            <suggestOptions>
+                                <default>
+                                    <additionalSearchFields>nav_title,alias,url</additionalSearchFields>
+                                </default>
+                            </suggestOptions>
+                        </config>
+                    </settings.detailPid>
+                </el>
+            </ROOT>
+        </sSOURCE>
+        <sFILTER>
+            <ROOT>
+                <sheetTitle>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.sheet.filter</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.enabledFilters>
+                        <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.enabledFilters</label>
+                        <description>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.enabledFilters.description</description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectCheckBox</renderType>
+                            <minitems>0</minitems>
+                            <maxitems>99</maxitems>
+                            <default>search,type,address</default>
+                            <items>
+                                <numIndex index="0">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.enabledFilters.search</label>
+                                    <value>search</value>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.enabledFilters.type</label>
+                                    <value>type</value>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <label>LLL:EXT:directory/Resources/Private/Language/locallang.xlf:flexform.organisation.enabledFilters.address</label>
+                                    <value>address</value>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.enabledFilters>
+                </el>
+            </ROOT>
+        </sFILTER>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,16 @@
+.t3js-formengine-palette-field:has(textarea[name*="[opening_hours]"]),
+.t3js-formengine-palette-field:has(textarea[name*="[special_hours_note]"]),
+.t3js-formengine-palette-field:has(textarea[name*="[parking]"]),
+.t3js-formengine-palette-field:has(textarea[name*="[accessibility]"]) {
+    flex: 1 1 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+}
+
+.t3js-formengine-palette-field:has(textarea[name*="[opening_hours]"]) .ck-editor__editable,
+.t3js-formengine-palette-field:has(textarea[name*="[special_hours_note]"]) .ck-editor__editable,
+.t3js-formengine-palette-field:has(textarea[name*="[parking]"]) .ck-editor__editable,
+.t3js-formengine-palette-field:has(textarea[name*="[accessibility]"]) .ck-editor__editable {
+    min-height: 7rem;
+    max-height: 12rem;
+    overflow-y: auto;
+}

@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<article class="directory-person">
+    <f:if condition="{displayMode} != 'compact'">
+        <f:render partial="Person/Portrait" arguments="{person: person, detailPid: detailPid}"/>
+    </f:if>
+
+    <div class="directory-person__body">
+        <f:render partial="Person/Heading" arguments="{person: person, detailPid: detailPid}"/>
+
+        <f:if condition="{person.position}">
+            <p class="directory-person__position">{person.position}</p>
+        </f:if>
+
+        <f:if condition="{person.shortDescription}">
+            <p class="directory-person__summary">{person.shortDescription}</p>
+        </f:if>
+
+        <f:render partial="Person/Contact" arguments="{person: person}"/>
+
+        <f:if condition="{displayMode} == 'full'">
+            <f:render partial="Person/Address" arguments="{location: person.primaryLocation}"/>
+        </f:if>
+
+        <f:if condition="{detailPid}">
+            <p class="directory-person__more">
+                <f:link.action
+                    action="show"
+                    controller="Person"
+                    pluginName="PersonDetail"
+                    extensionName="Directory"
+                    pageUid="{detailPid}"
+                    arguments="{person: person}"
+                    class="directory-person__more-link"
+                >
+                    <f:translate key="list.readMore" extensionName="Directory"/>
+                </f:link.action>
+            </p>
+        </f:if>
+    </div>
+</article>
+
+</html>

@@ -1,0 +1,83 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{location}">
+    <article class="directory-organisation-location">
+        <h3 class="directory-organisation-location__name">{location.name}</h3>
+        <f:if condition="{location.locationType}">
+            <p class="directory-organisation-location__type">
+                <f:translate key="LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:location_type.{location.locationType}"/>
+            </p>
+        </f:if>
+        <f:variable name="hasAddress" value="{location.street}{location.houseNumber}{location.addressAddition}{location.postOfficeBox}{location.zip}{location.city}{location.district}{location.region}{location.country}"/>
+        <f:if condition="{hasAddress}">
+            <address class="directory-person__address-body directory-organisation-location__address">
+                <f:if condition="{location.street} || {location.houseNumber}">
+                    <span class="directory-person__address-line">
+                        {location.street} {location.houseNumber}
+                    </span>
+                </f:if>
+                <f:if condition="{location.addressAddition}">
+                    <span class="directory-person__address-line">{location.addressAddition}</span>
+                </f:if>
+                <f:if condition="{location.postOfficeBox}">
+                    <span class="directory-person__address-line">
+                        <f:translate key="label.postOfficeBox" extensionName="Directory"/>
+                        {location.postOfficeBox}
+                    </span>
+                </f:if>
+                <f:if condition="{location.zip} || {location.city}">
+                    <span class="directory-person__address-line">
+                        {location.zip} {location.city}
+                    </span>
+                </f:if>
+                <f:if condition="{location.district}">
+                    <span class="directory-person__address-line">{location.district}</span>
+                </f:if>
+                <f:if condition="{location.region}">
+                    <span class="directory-person__address-line">{location.region}</span>
+                </f:if>
+                <f:if condition="{location.country}">
+                    <span class="directory-person__address-line">{location.country}</span>
+                </f:if>
+            </address>
+        </f:if>
+        <f:if condition="{location.shortDescription}">
+            <p class="directory-organisation-location__summary">{location.shortDescription}</p>
+        </f:if>
+        <f:if condition="{location.email} || {location.phone} || {location.website}">
+            <dl class="directory-organisation__facts">
+                <f:if condition="{location.email}">
+                    <div class="directory-organisation__fact">
+                        <dt><f:translate key="label.email" extensionName="Directory"/></dt>
+                        <dd><f:link.typolink parameter="{location.email}" class="directory-organisation__link"/></dd>
+                    </div>
+                </f:if>
+                <f:if condition="{location.phone}">
+                    <div class="directory-organisation__fact">
+                        <dt><f:translate key="label.phone" extensionName="Directory"/></dt>
+                        <dd><f:link.typolink parameter="{location.phone}" class="directory-organisation__link"/></dd>
+                    </div>
+                </f:if>
+                <f:if condition="{location.website}">
+                    <div class="directory-organisation__fact">
+                        <dt><f:translate key="label.website" extensionName="Directory"/></dt>
+                        <dd><f:link.typolink parameter="{location.website}" class="directory-organisation__link"/></dd>
+                    </div>
+                </f:if>
+            </dl>
+        </f:if>
+        <f:if condition="{location.openingHours}">
+            <div class="directory-organisation-location__hours">
+                <h4 class="directory-organisation-location__hours-title">
+                    <f:translate key="label.openingHours" extensionName="Directory"/>
+                </h4>
+                <div class="directory-organisation-detail__richtext">
+                    <f:format.html>{location.openingHours}</f:format.html>
+                </div>
+            </div>
+        </f:if>
+    </article>
+</f:if>
+
+</html>

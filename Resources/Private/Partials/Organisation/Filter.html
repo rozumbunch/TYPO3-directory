@@ -1,0 +1,79 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<form method="get" action="{f:uri.page()}" class="directory-filter directory-organisation-filter" role="search">
+    <f:if condition="{showSearchFilter}">
+        <label class="full-width">
+            <span><f:translate key="filter.q" extensionName="Directory"/></span>
+            <input
+                type="search"
+                name="{pluginNamespace}[q]"
+                value="{filter.q}"
+                placeholder=" "
+                autocomplete="off"
+            />
+        </label>
+    </f:if>
+
+    <f:if condition="{showTypeFilter}">
+        <label>
+            <span><f:translate key="organisation.filter.type" extensionName="Directory"/></span>
+            <select name="{pluginNamespace}[type]">
+                <option value="">
+                    <f:translate key="organisation.filter.type.all" extensionName="Directory"/>
+                </option>
+                <f:for each="{typeOptions}" as="type">
+                    <f:if condition="{filter.type} == {type}">
+                        <f:then>
+                            <option value="{type}" selected="selected">
+                                <f:translate key="LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.{type}"/>
+                            </option>
+                        </f:then>
+                        <f:else>
+                            <option value="{type}">
+                                <f:translate key="LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.{type}"/>
+                            </option>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </select>
+        </label>
+    </f:if>
+
+    <f:if condition="{showAddressFilter}">
+        <label>
+            <span><f:translate key="filter.zip" extensionName="Directory"/></span>
+            <input
+                type="text"
+                name="{pluginNamespace}[zip]"
+                value="{filter.zip}"
+                placeholder=" "
+                autocomplete="off"
+                inputmode="numeric"
+            />
+        </label>
+        <label>
+            <span><f:translate key="filter.city" extensionName="Directory"/></span>
+            <input
+                type="text"
+                name="{pluginNamespace}[city]"
+                value="{filter.city}"
+                placeholder=" "
+                autocomplete="off"
+            />
+        </label>
+    </f:if>
+
+    <div class="directory-filter__actions">
+        <button type="submit" class="directory-filter__submit">
+            <f:translate key="filter.submit" extensionName="Directory"/>
+        </button>
+        <f:if condition="{filter.active}">
+            <a href="{f:uri.page()}" class="directory-filter__reset">
+                <f:translate key="filter.reset" extensionName="Directory"/>
+            </a>
+        </f:if>
+    </div>
+</form>
+
+</html>

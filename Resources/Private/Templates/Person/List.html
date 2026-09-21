@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <div class="directory-person-list directory-person-list--layout-{layout} directory-person-list--display-{displayMode}">
+        <f:if condition="{showFilter}">
+            <f:render partial="Person/Filter" arguments="{
+                filter: filter,
+                organisations: organisations,
+                showSearchFilter: showSearchFilter,
+                showOrganisationFilter: showOrganisationFilter,
+                showAddressFilter: showAddressFilter,
+                pluginNamespace: pluginNamespace
+            }"/>
+        </f:if>
+
+        <f:if condition="{showFilter}">
+            <p class="directory-person-list__count" aria-live="polite">
+                <f:if condition="{resultCount} == 1">
+                    <f:then>
+                        <f:translate key="filter.results.one" extensionName="Directory"/>
+                    </f:then>
+                    <f:else>
+                        <f:translate key="filter.results" extensionName="Directory" arguments="{0: resultCount}"/>
+                    </f:else>
+                </f:if>
+            </p>
+        </f:if>
+
+        <f:if condition="{persons}">
+            <f:then>
+                <ul class="directory-person-list__items">
+                    <f:for each="{persons}" as="person">
+                        <li class="directory-person-list__item">
+                            <f:render partial="Person/Item" arguments="{
+                                person: person,
+                                displayMode: displayMode,
+                                detailPid: detailPid
+                            }"/>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                <p class="directory-person-list__empty">
+                    <f:if condition="{filter.active}">
+                        <f:then>
+                            <f:translate key="filter.empty" extensionName="Directory"/>
+                        </f:then>
+                        <f:else>
+                            <f:translate key="list.empty" extensionName="Directory"/>
+                        </f:else>
+                    </f:if>
+                </p>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+
+</html>

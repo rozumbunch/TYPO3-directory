@@ -1,0 +1,5 @@
+directory.storagePid = 0
+directory.personDetailPid = 0
+directory.personListPid = 0
+directory.organisationDetailPid = 0
+directory.organisationListPid = 0

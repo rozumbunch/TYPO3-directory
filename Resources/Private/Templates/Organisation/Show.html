@@ -1,0 +1,126 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <f:if condition="{organisation}">
+        <f:then>
+            <article class="directory-organisation-detail">
+                <f:if condition="{listPid}">
+                    <p class="directory-organisation-detail__back">
+                        <f:link.page pageUid="{listPid}" class="directory-organisation-detail__back-link">
+                            <f:translate key="detail.back" extensionName="Directory"/>
+                        </f:link.page>
+                    </p>
+                </f:if>
+                <header class="directory-organisation-detail__hero">
+                    <f:render partial="Organisation/Logo" arguments="{organisation: organisation, maxWidth: 240}"/>
+                    <div class="directory-organisation-detail__identity">
+                        <f:render partial="Organisation/Heading" arguments="{organisation: organisation, detailPid: 0, isDetail: 1}"/>
+                        <f:if condition="{organisation.organisationType}">
+                            <p class="directory-organisation__type">
+                                <f:translate key="LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.{organisation.organisationType}"/>
+                            </p>
+                        </f:if>
+                        <f:if condition="{organisation.identifier} || {organisation.shortName}">
+                            <dl class="directory-organisation__facts directory-organisation__facts--meta">
+                                <f:if condition="{organisation.shortName}">
+                                    <div class="directory-organisation__fact">
+                                        <dt><f:translate key="label.shortName" extensionName="Directory"/></dt>
+                                        <dd>{organisation.shortName}</dd>
+                                    </div>
+                                </f:if>
+                                <f:if condition="{organisation.identifier}">
+                                    <div class="directory-organisation__fact">
+                                        <dt><f:translate key="label.identifier" extensionName="Directory"/></dt>
+                                        <dd>{organisation.identifier}</dd>
+                                    </div>
+                                </f:if>
+                            </dl>
+                        </f:if>
+                        <f:if condition="{organisation.shortDescription}">
+                            <p class="directory-organisation__summary">{organisation.shortDescription}</p>
+                        </f:if>
+                        <f:render partial="Organisation/Contact" arguments="{organisation: organisation, extended: 1}"/>
+                    </div>
+                </header>
+
+                <div class="directory-organisation-detail__main">
+                    <f:if condition="{organisation.locations -> f:count()}">
+                        <section class="directory-organisation-detail__panel" aria-labelledby="directory-organisation-locations">
+                            <h2 id="directory-organisation-locations" class="directory-organisation-detail__title">
+                                <f:translate key="organisation.section.locations" extensionName="Directory"/>
+                            </h2>
+                            <div class="directory-organisation-detail__locations">
+                                <f:for each="{organisation.locations}" as="location">
+                                    <f:render partial="Organisation/Location" arguments="{location: location}"/>
+                                </f:for>
+                            </div>
+                        </section>
+                    </f:if>
+
+                    <f:if condition="{organisation.contactPersons -> f:count()}">
+                        <section class="directory-organisation-detail__panel" aria-labelledby="directory-organisation-contacts">
+                            <h2 id="directory-organisation-contacts" class="directory-organisation-detail__title">
+                                <f:translate key="organisation.section.contacts" extensionName="Directory"/>
+                            </h2>
+                            <ul class="directory-organisation-detail__contacts">
+                                <f:for each="{organisation.contactPersons}" as="person">
+                                    <li class="directory-organisation-detail__contact">
+                                        <f:render partial="Person/Item" arguments="{
+                                            person: person,
+                                            displayMode: 'compact',
+                                            detailPid: personDetailPid
+                                        }"/>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </section>
+                    </f:if>
+
+                    <f:if condition="{organisation.description}">
+                        <section class="directory-organisation-detail__panel" aria-labelledby="directory-organisation-description">
+                            <h2 id="directory-organisation-description" class="directory-organisation-detail__title">
+                                <f:translate key="label.description" extensionName="Directory"/>
+                            </h2>
+                            <div class="directory-organisation-detail__richtext">
+                                <f:format.html>{organisation.description}</f:format.html>
+                            </div>
+                        </section>
+                    </f:if>
+
+                    <f:if condition="{organisation.media -> f:count()}">
+                        <section class="directory-organisation-detail__panel" aria-labelledby="directory-organisation-media">
+                            <h2 id="directory-organisation-media" class="directory-organisation-detail__title">
+                                <f:translate key="label.media" extensionName="Directory"/>
+                            </h2>
+                            <ul class="directory-organisation-detail__media">
+                                <f:for each="{organisation.media}" as="mediaItem">
+                                    <li class="directory-organisation-detail__media-item">
+                                        <f:media file="{mediaItem}" width="800" class="directory-organisation-detail__media-file"/>
+                                        <f:if condition="{mediaItem.originalResource.title} || {mediaItem.originalResource.description}">
+                                            <p class="directory-organisation-detail__media-caption">
+                                                {mediaItem.originalResource.title}
+                                                <f:if condition="{mediaItem.originalResource.description}">
+                                                    {mediaItem.originalResource.description}
+                                                </f:if>
+                                            </p>
+                                        </f:if>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </section>
+                    </f:if>
+                </div>
+            </article>
+        </f:then>
+        <f:else>
+            <p class="directory-organisation-list__empty">
+                <f:translate key="organisation.detail.empty" extensionName="Directory"/>
+            </p>
+        </f:else>
+    </f:if>
+</f:section>
+
+</html>

@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{isDetail}">
+    <f:then>
+        <h1 class="directory-person__name directory-person__name--detail">
+            <f:render section="Name" arguments="{person: person}"/>
+        </h1>
+    </f:then>
+    <f:else>
+        <h3 class="directory-person__name">
+            <f:if condition="{detailPid}">
+                <f:then>
+                    <f:link.action
+                        action="show"
+                        controller="Person"
+                        pluginName="PersonDetail"
+                        extensionName="Directory"
+                        pageUid="{detailPid}"
+                        arguments="{person: person}"
+                        class="directory-person__name-link"
+                    >
+                        <f:render section="Name" arguments="{person: person}"/>
+                    </f:link.action>
+                </f:then>
+                <f:else>
+                    <f:render section="Name" arguments="{person: person}"/>
+                </f:else>
+            </f:if>
+        </h3>
+    </f:else>
+</f:if>
+
+<f:section name="Name">
+    <f:if condition="{person.salutation}">
+        <span class="directory-person__salutation"><f:translate key="LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:salutation.{person.salutation}"/></span>
+    </f:if>
+    <f:if condition="{person.title}">
+        <span class="directory-person__title">{person.title}</span>
+    </f:if>
+    <f:if condition="{person.firstName}">
+        <span class="directory-person__given">{person.firstName}</span>
+    </f:if>
+    <span class="directory-person__family">{person.lastName}</span>
+</f:section>
+
+</html>

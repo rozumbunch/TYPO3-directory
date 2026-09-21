@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<article class="directory-organisation">
+    <f:if condition="{displayMode} != 'compact'">
+        <f:render partial="Organisation/Logo" arguments="{organisation: organisation, detailPid: detailPid}"/>
+    </f:if>
+
+    <div class="directory-organisation__body">
+        <f:render partial="Organisation/Heading" arguments="{organisation: organisation, detailPid: detailPid}"/>
+
+        <f:if condition="{organisation.organisationType}">
+            <p class="directory-organisation__type">
+                <f:translate key="LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.{organisation.organisationType}"/>
+            </p>
+        </f:if>
+
+        <f:if condition="{organisation.shortDescription}">
+            <p class="directory-organisation__summary">{organisation.shortDescription}</p>
+        </f:if>
+
+        <f:render partial="Organisation/Contact" arguments="{organisation: organisation}"/>
+
+        <f:if condition="{displayMode} == 'full'">
+            <f:render partial="Person/Address" arguments="{location: organisation.primaryLocation}"/>
+        </f:if>
+
+        <f:if condition="{detailPid}">
+            <p class="directory-organisation__more">
+                <f:link.action
+                    action="show"
+                    controller="Organisation"
+                    pluginName="OrganisationShow"
+                    extensionName="Directory"
+                    pageUid="{detailPid}"
+                    arguments="{organisation: organisation}"
+                    class="directory-organisation__more-link"
+                >
+                    <f:translate key="organisation.list.readMore" extensionName="Directory"/>
+                </f:link.action>
+            </p>
+        </f:if>
+    </div>
+</article>
+
+</html>

@@ -1,0 +1,128 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <f:if condition="{person}">
+        <f:then>
+            <article class="directory-person-detail">
+                <f:if condition="{listPid}">
+                    <p class="directory-person-detail__back">
+                        <f:link.page pageUid="{listPid}" class="directory-person-detail__back-link">
+                            <f:translate key="detail.back" extensionName="Directory"/>
+                        </f:link.page>
+                    </p>
+                </f:if>
+                <header class="directory-person-detail__hero">
+                    <f:render partial="Person/Portrait" arguments="{person: person, maxWidth: 640}"/>
+                    <div class="directory-person-detail__identity">
+                        <f:render partial="Person/Heading" arguments="{person: person, detailPid: 0, isDetail: 1}"/>
+                        <f:if condition="{person.position}">
+                            <p class="directory-person__position">{person.position}</p>
+                        </f:if>
+                        <f:if condition="{person.identifier} || {person.displayName}">
+                            <dl class="directory-person__facts directory-person__facts--meta">
+                                <f:if condition="{person.identifier}">
+                                    <div class="directory-person__fact">
+                                        <dt><f:translate key="label.identifier" extensionName="Directory"/></dt>
+                                        <dd>{person.identifier}</dd>
+                                    </div>
+                                </f:if>
+                                <f:if condition="{person.displayName}">
+                                    <div class="directory-person__fact">
+                                        <dt><f:translate key="label.displayName" extensionName="Directory"/></dt>
+                                        <dd>{person.displayName}</dd>
+                                    </div>
+                                </f:if>
+                            </dl>
+                        </f:if>
+                        <f:if condition="{person.shortDescription}">
+                            <p class="directory-person__summary">{person.shortDescription}</p>
+                        </f:if>
+                        <f:render partial="Person/Contact" arguments="{person: person, extended: 1}"/>
+                    </div>
+                </header>
+
+                <div class="directory-person-detail__main">
+                    <f:if condition="{person.organisations -> f:count()}">
+                        <section class="directory-person-detail__panel" aria-labelledby="directory-person-organisations">
+                            <h2 id="directory-person-organisations" class="directory-person-detail__title">
+                                <f:translate key="label.organisations" extensionName="Directory"/>
+                            </h2>
+                            <ul class="directory-person-detail__list">
+                                <f:for each="{person.organisations}" as="organisation">
+                                    <li class="directory-person-detail__list-item">
+                                        <span class="directory-person-detail__list-name">{organisation.name}</span>
+                                        <f:if condition="{organisation.shortName}">
+                                            <span class="directory-person-detail__list-meta">{organisation.shortName}</span>
+                                        </f:if>
+                                        <f:if condition="{organisation.organisationType}">
+                                            <span class="directory-person-detail__list-meta">
+                                                <f:translate key="LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:organisation_type.{organisation.organisationType}"/>
+                                            </span>
+                                        </f:if>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </section>
+                    </f:if>
+
+                    <f:if condition="{person.locations -> f:count()}">
+                        <section class="directory-person-detail__panel" aria-labelledby="directory-person-addresses">
+                            <h2 id="directory-person-addresses" class="directory-person-detail__title">
+                                <f:translate key="label.addresses" extensionName="Directory"/>
+                            </h2>
+                            <div class="directory-person-detail__addresses">
+                                <f:for each="{person.locations}" as="location">
+                                    <f:render partial="Person/Address" arguments="{location: location, extended: 1}"/>
+                                </f:for>
+                            </div>
+                        </section>
+                    </f:if>
+
+                    <f:if condition="{person.description}">
+                        <section class="directory-person-detail__panel" aria-labelledby="directory-person-description">
+                            <h2 id="directory-person-description" class="directory-person-detail__title">
+                                <f:translate key="label.description" extensionName="Directory"/>
+                            </h2>
+                            <div class="directory-person-detail__richtext">
+                                <f:format.html>{person.description}</f:format.html>
+                            </div>
+                        </section>
+                    </f:if>
+
+                    <f:if condition="{person.media -> f:count()}">
+                        <section class="directory-person-detail__panel" aria-labelledby="directory-person-media">
+                            <h2 id="directory-person-media" class="directory-person-detail__title">
+                                <f:translate key="label.media" extensionName="Directory"/>
+                            </h2>
+                            <ul class="directory-person-detail__media">
+                                <f:for each="{person.media}" as="mediaItem">
+                                    <li class="directory-person-detail__media-item">
+                                        <f:media file="{mediaItem}" width="800" class="directory-person-detail__media-file"/>
+                                        <f:if condition="{mediaItem.originalResource.title} || {mediaItem.originalResource.description}">
+                                            <p class="directory-person-detail__media-caption">
+                                                {mediaItem.originalResource.title}
+                                                <f:if condition="{mediaItem.originalResource.description}">
+                                                    {mediaItem.originalResource.description}
+                                                </f:if>
+                                            </p>
+                                        </f:if>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </section>
+                    </f:if>
+                </div>
+            </article>
+        </f:then>
+        <f:else>
+            <p class="directory-person-list__empty">
+                <f:translate key="detail.empty" extensionName="Directory"/>
+            </p>
+        </f:else>
+    </f:if>
+</f:section>
+
+</html>

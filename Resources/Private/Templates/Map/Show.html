@@ -1,0 +1,79 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <f:asset.css identifier="directory-leaflet" href="EXT:directory/Resources/Public/Vendor/leaflet/leaflet.css" priority="true"/>
+    <f:asset.css identifier="directory-map" href="EXT:directory/Resources/Public/Css/map.css"/>
+    <f:asset.script identifier="directory-leaflet" src="EXT:directory/Resources/Public/Vendor/leaflet/leaflet.js" priority="true"/>
+    <f:asset.script identifier="directory-map" src="EXT:directory/Resources/Public/JavaScript/map.js"/>
+
+    <div class="directory-map" data-directory-map="{f:if(condition: requireConsent, then: 'consent', else: 'ready')}">
+        <script type="application/json" class="directory-map__config">{mapConfigJson -> f:format.raw()}</script>
+
+        <f:if condition="{markers}">
+            <f:then>
+                <p class="directory-map__count">
+                    <f:if condition="{resultCount} == 1">
+                        <f:then>
+                            <f:translate key="map.results.one" extensionName="Directory"/>
+                        </f:then>
+                        <f:else>
+                            <f:translate key="map.results" extensionName="Directory" arguments="{0: resultCount}"/>
+                        </f:else>
+                    </f:if>
+                </p>
+
+                <div class="directory-map__viewport" style="--directory-map-height: {height}px;">
+                    <f:if condition="{requireConsent}">
+                        <div class="directory-map__consent" data-directory-map-consent>
+                            <p class="directory-map__consent-text">
+                                <f:translate key="map.consent.text" extensionName="Directory"/>
+                            </p>
+                            <button type="button" class="directory-map__consent-button" data-directory-map-load>
+                                <f:translate key="map.consent.button" extensionName="Directory"/>
+                            </button>
+                        </div>
+                    </f:if>
+                    <div class="directory-map__canvas{f:if(condition: requireConsent, then: ' directory-map__canvas--pending')}" data-directory-map-canvas></div>
+                </div>
+
+                <f:if condition="{showLegend} && {kinds}">
+                    <ul class="directory-map__legend" aria-label="{f:translate(key: 'map.legend', extensionName: 'Directory')}">
+                        <f:for each="{kinds}" as="kind">
+                            <li class="directory-map__legend-item directory-map__legend-item--{kind}">
+                                <span class="directory-map__legend-pin" aria-hidden="true"></span>
+                                <f:translate key="map.kind.{kind}" extensionName="Directory"/>
+                            </li>
+                        </f:for>
+                    </ul>
+                </f:if>
+
+                <f:if condition="{showList}">
+                    <div class="directory-map__list">
+                        <h2 class="directory-map__list-title">
+                            <f:translate key="map.list.title" extensionName="Directory"/>
+                        </h2>
+                        <ul class="directory-map__list-items">
+                            <f:for each="{markers}" as="marker">
+                                <f:for each="{marker.items}" as="item">
+                                    <li class="directory-map__list-item directory-map__list-item--{item.kind}">
+                                        <f:render partial="Map/Popup" arguments="{item: item, lat: marker.lat, lng: marker.lng}"/>
+                                    </li>
+                                </f:for>
+                            </f:for>
+                        </ul>
+                    </div>
+                </f:if>
+            </f:then>
+            <f:else>
+                <p class="directory-map__empty">
+                    <f:translate key="map.empty" extensionName="Directory"/>
+                </p>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+
+</html>

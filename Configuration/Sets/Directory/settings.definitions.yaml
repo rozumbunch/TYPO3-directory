@@ -1,0 +1,35 @@
+categories:
+  directory:
+    label: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.category'
+
+settings:
+  directory.storagePid:
+    type: page
+    default: 0
+    category: directory
+    label: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.storagePid'
+    description: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.storagePid.description'
+  directory.personDetailPid:
+    type: page
+    default: 0
+    category: directory
+    label: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.personDetailPid'
+    description: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.personDetailPid.description'
+  directory.personListPid:
+    type: page
+    default: 0
+    category: directory
+    label: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.personListPid'
+    description: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.personListPid.description'
+  directory.organisationDetailPid:
+    type: page
+    default: 0
+    category: directory
+    label: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.organisationDetailPid'
+    description: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.organisationDetailPid.description'
+  directory.organisationListPid:
+    type: page
+    default: 0
+    category: directory
+    label: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.organisationListPid'
+    description: 'LLL:EXT:directory/Resources/Private/Language/locallang_db.xlf:settings.organisationListPid.description'

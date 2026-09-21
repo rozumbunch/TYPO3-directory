@@ -1,0 +1,62 @@
+routeEnhancers:
+  DirectoryPerson:
+    type: Extbase
+    extension: Directory
+    plugin: PersonDetail
+    defaultController: 'Person::show'
+    routes:
+      - routePath: '/{person-path}/{person-slug}'
+        _controller: 'Person::show'
+        _arguments:
+          person-slug: person
+    aspects:
+      person-path:
+        type: LocaleModifier
+        default: 'profile'
+        localeMap:
+          - locale: 'de_.*'
+            value: 'profil'
+          - locale: 'en_.*'
+            value: 'profile'
+      person-slug:
+        type: PersistedAliasMapper
+        tableName: tx_directory_domain_model_person
+        routeFieldName: slug
+  DirectoryOrganisation:
+    type: Extbase
+    extension: Directory
+    plugin: OrganisationShow
+    defaultController: 'Organisation::show'
+    routes:
+      - routePath: '/{organisation-path}/{organisation-slug}'
+        _controller: 'Organisation::show'
+        _arguments:
+          organisation-slug: organisation
+    aspects:
+      organisation-path:
+        type: LocaleModifier
+        default: 'organization'
+        localeMap:
+          - locale: 'de_.*'
+            value: 'organisation'
+          - locale: 'en_.*'
+            value: 'organization'
+      organisation-slug:
+        type: PersistedAliasMapper
+        tableName: tx_directory_domain_model_organisation
+        routeFieldName: slug
+  DirectoryOrganisationOrganigram:
+    type: Extbase
+    extension: Directory
+    plugin: OrganisationDetail
+    defaultController: 'Organisation::organigram'
+    routes:
+      - routePath: '/{section}'
+        _controller: 'Organisation::organigram'
+    aspects:
+      section:
+        type: StaticValueMapper
+        map:
+          structure: structure
+          locations: locations
+          contacts: contacts

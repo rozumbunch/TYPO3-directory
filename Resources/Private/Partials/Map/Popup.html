@@ -1,0 +1,54 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<article class="directory-map-card">
+    <p class="directory-map-card__kind">{f:translate(key: 'map.kind.{item.kind}', extensionName: 'Directory')}</p>
+    <h3 class="directory-map-card__title">
+        <f:if condition="{item.url}">
+            <f:then>
+                <a href="{item.url}" class="directory-map-card__link">{item.title}</a>
+            </f:then>
+            <f:else>
+                {item.title}
+            </f:else>
+        </f:if>
+    </h3>
+    <f:if condition="{item.subtitle}">
+        <p class="directory-map-card__subtitle">{item.subtitle}</p>
+    </f:if>
+    <f:if condition="{item.related}">
+        <p class="directory-map-card__related">{item.related}</p>
+    </f:if>
+    <f:if condition="{item.address}">
+        <p class="directory-map-card__address">{item.address}</p>
+    </f:if>
+    <f:if condition="{item.summary}">
+        <p class="directory-map-card__summary">{item.summary}</p>
+    </f:if>
+    <ul class="directory-map-card__facts">
+        <f:if condition="{item.phone}">
+            <li>
+                <a href="{item.phone}">{item.phoneLabel}</a>
+            </li>
+        </f:if>
+        <f:if condition="{item.email}">
+            <li>
+                <a href="{item.email}">{item.emailLabel}</a>
+            </li>
+        </f:if>
+        <f:if condition="{item.website}">
+            <li>
+                <a href="{item.website}" rel="noopener noreferrer">{item.websiteLabel}</a>
+            </li>
+        </f:if>
+        <f:if condition="{lat} && {lng}">
+            <li>
+                <a href="https://www.openstreetmap.org/directions?from=&amp;to={lat}%2C{lng}" rel="noopener noreferrer">
+                    <f:translate key="map.route" extensionName="Directory"/>
+                </a>
+            </li>
+        </f:if>
+    </ul>
+</article>
+
+</html>
