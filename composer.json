@@ -1,6 +1,6 @@
 {
     "name": "rozumbunch/directory",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "typo3-cms-extension",
     "description": "Directory of persons, organisations and locations",
     "license": ["GPL-2.0-or-later"],

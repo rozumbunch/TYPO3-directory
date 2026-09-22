@@ -18,6 +18,8 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 final class MapController extends ActionController
 {
+    use ContentObjectDataViewTrait;
+
     public function __construct(
         private readonly DirectoryQueryService $directoryQueryService,
         private readonly MapMarkerFactory $mapMarkerFactory,

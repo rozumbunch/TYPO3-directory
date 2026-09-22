@@ -19,6 +19,8 @@ use TYPO3\CMS\Frontend\Page\PageInformation;
 
 final class PersonController extends ActionController
 {
+    use ContentObjectDataViewTrait;
+
     public function __construct(
         private readonly DirectoryQueryService $directoryQueryService,
         private readonly DirectorySeoWriter $directorySeoWriter,
